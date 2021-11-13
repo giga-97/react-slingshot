@@ -4,6 +4,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:13.8.0
+    working_directory: ~/react-slingshot
     steps:
       - run: npm i
       - run: npm run lint
@@ -15,6 +16,7 @@ jobs:
   test:
     docker:
       - image: circleci/node:13.8.0
+    working_directory: ~/react-slingshot
     steps:
       - restore_cache:
           key: "npm_package"
@@ -24,6 +26,7 @@ jobs:
   analyze:
     docker:
       - image: circleci/node:13.8.0
+    working_directory: ~/react-slingshot
     steps:
       - restore_cache:
           key: "npm_package"
