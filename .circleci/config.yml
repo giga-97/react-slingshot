@@ -6,6 +6,7 @@ jobs:
       - image: circleci/node:13.8.0
     working_directory: ~/react-slingshot
     steps:
+      - run: ls -ltrh
       - run: npm i
       - run: npm run lint
       - save_cache:
@@ -20,7 +21,6 @@ jobs:
     steps:
       - restore_cache:
           key: "npm_package"
-      - run: ls -ltrh
       - run: npm i
       - run: npm audit
 
