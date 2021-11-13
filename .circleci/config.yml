@@ -20,6 +20,7 @@ jobs:
     steps:
       - restore_cache:
           key: "npm_package"
+      - run: ls -ltrh
       - run: npm i
       - run: npm audit
 
