@@ -4,7 +4,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:13.8.0
-    working_directory: ~/react-slingshot
+    working_directory: giga-97/react-slingshot
     steps:
       - run: ls -ltrh
       - run: npm i
